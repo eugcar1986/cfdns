@@ -1,4 +1,6 @@
 #!/bin/bash
+clear
+rm -rf install.sh 2>/dev/null;
 MYIP=$(curl -4 icanhazip.com)
 ethernet=`ip route get 8.8.8.8 | awk 'NR==2 {print $1}' RS="dev"`;
 if [ $MYIP = "" ]; then
